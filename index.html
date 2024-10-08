@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoções de Roupas</title>
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e91e63;
+        }
+
+        /* Estilos do Carrossel */
+        .carrossel {
+            position: relative;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 20px auto;
+        }
+
+        .produtos {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .produto {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+            flex: 0 0 200px; /* Tamanho fixo para cada produto */
+        }
+
+        .produto img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Estilos de Navegação */
+        .navegacao {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .botao {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .botao:hover {
+            background-color: #d81b60;
+            transform: scale(1.05);
+        }
+
+        /* Estilos do Rodapé */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            width: 100%;
+        }
+
+        footer a {
+            color: #e91e63;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Promoções de Roupas</h1>
+        <nav>
+            <ul>
+                <li><a href="#blusas">Blusas</a></li>
+                <li><a href="#calcas">Calças</a></li>
+                <li><a href="#saias">Saias</a></li>
+                <li><a href="#vestidos">Vestidos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="blusas">
+            <h2>Blusas</h2>
+            <div class="carrossel">
+                <div class="produtos">
+                    <div class="produto">
+                        <h3>Blusa de Renda</h3>
+                        <img src="blusa_renda.jpg" alt="Blusa de Renda">
+                        <p>Preço: R$ 59,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Blusa Oversized</h3>
+                        <img src="blusa_oversized.jpg" alt="Blusa Oversized">
+                        <p>Preço: R$ 89,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Blusa de Inverno</h3>
+                        <img src="blusa_inverno.jpg" alt="Blusa de Inverno">
+                        <p>Preço: R$ 79,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Blusa de Algodão</h3>
+                        <img src="blusa_algodao.jpg" alt="Blusa de Algodão">
+                        <p>Preço: R$ 49,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Blusa Estampada</h3>
+                        <img src="blusa_estampada.jpg" alt="Blusa Estampada">
+                        <p>Preço: R$ 69,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Blusa de Manga Longa</h3>
+                        <img src="blusa_manga_longa.jpg" alt="Blusa de Manga Longa">
+                        <p>Preço: R$ 89,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="navegacao">
+                    <button class="botao" id="prev-blusas">❮</button>
+                    <button class="botao" id="next-blusas">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="calcas">
+            <h2>Calças</h2>
+            <div class="carrossel">
+                <div class="produtos">
+                    <div class="produto">
+                        <h3>Calça Jeans</h3>
+                        <img src="calca_jeans.jpg" alt="Calça Jeans">
+                        <p>Preço: R$ 99,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Calça de Moletom</h3>
+                        <img src="calca_moletom.jpg" alt="Calça de Moletom">
+                        <p>Preço: R$ 89,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Calça de Alfaiataria</h3>
+                        <img src="calca_alfaiataria.jpg" alt="Calça de Alfaiataria">
+                        <p>Preço: R$ 119,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Calça Cargo</h3>
+                        <img src="calca_cargo.jpg" alt="Calça Cargo">
+                        <p>Preço: R$ 109,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Calça Legging</h3>
+                        <img src="calca_legging.jpg" alt="Calça Legging">
+                        <p>Preço: R$ 79,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Calça de Cinta</h3>
+                        <img src="calca_cinta.jpg" alt="Calça de Cinta">
+                        <p>Preço: R$ 69,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="navegacao">
+                    <button class="botao" id="prev-calcas">❮</button>
+                    <button class="botao" id="next-calcas">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="saias">
+            <h2>Saias</h2>
+            <div class="carrossel">
+                <div class="produtos">
+                    <div class="produto">
+                        <h3>Saia Plissada</h3>
+                        <img src="saia_plissada.jpg" alt="Saia Plissada">
+                        <p>Preço: R$ 89,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Saia Midi</h3>
+                        <img src="saia_midi.jpg" alt="Saia Midi">
+                        <p>Preço: R$ 79,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Saia Longa</h3>
+                        <img src="saia_longa.jpg" alt="Saia Longa">
+                        <p>Preço: R$ 99,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Saia Jeans</h3>
+                        <img src="saia_jeans.jpg" alt="Saia Jeans">
+                        <p>Preço: R$ 89,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Saia de Tule</h3>
+                        <img src="saia_tule.jpg" alt="Saia de Tule">
+                        <p>Preço: R$ 79,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Saia Curta</h3>
+                        <img src="saia_curta.jpg" alt="Saia Curta">
+                        <p>Preço: R$ 69,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="navegacao">
+                    <button class="botao" id="prev-saias">❮</button>
+                    <button class="botao" id="next-saias">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="vestidos">
+            <h2>Vestidos</h2>
+            <div class="carrossel">
+                <div class="produtos">
+                    <div class="produto">
+                        <h3>Vestido Floral</h3>
+                        <img src="vestido_floral.jpg" alt="Vestido Floral">
+                        <p>Preço: R$ 89,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Vestido Longo</h3>
+                        <img src="vestido_longo.jpg" alt="Vestido Longo">
+                        <p>Preço: R$ 159,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Vestido Midi</h3>
+                        <img src="vestido_midi.jpg" alt="Vestido Midi">
+                        <p>Preço: R$ 99,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Vestido de Festa</h3>
+                        <img src="vestido_festa.jpg" alt="Vestido de Festa">
+                        <p>Preço: R$ 199,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Vestido Tubinho</h3>
+                        <img src="vestido_tubinho.jpg" alt="Vestido Tubinho">
+                        <p>Preço: R$ 109,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <h3>Vestido de Algodão</h3>
+                        <img src="vestido_algodao.jpg" alt="Vestido de Algodão">
+                        <p>Preço: R$ 89,90</p>
+                        <button class="botao">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="navegacao">
+                    <button class="botao" id="prev-vestidos">❮</button>
+                    <button class="botao" id="next-vestidos">❯</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Promoções de Roupas. Todos os direitos reservados.</p>
+        <p><a href="#contato">Contato</a> | <a href="#sobre">Sobre Nós</a></p>
+    </footer>
+
+    <script>
+        const carrosselBlusas = document.querySelector('#blusas .produtos');
+        const carrosselCalcas = document.querySelector('#calcas .produtos');
+        const carrosselSaias = document.querySelector('#saias .produtos');
+        const carrosselVestidos = document.querySelector('#vestidos .produtos');
+
+        let indexBlusas = 0, indexCalcas = 0, indexSaias = 0, indexVestidos = 0;
+
+        function updateCarrossel(carrossel, index) {
+            carrossel.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function autoScroll() {
+            indexBlusas = (indexBlusas + 1) % 6;
+            updateCarrossel(carrosselBlusas, indexBlusas);
+
+            indexCalcas = (indexCalcas + 1) % 6;
+            updateCarrossel(carrosselCalcas, indexCalcas);
+
+            indexSaias = (indexSaias + 1) % 6;
+            updateCarrossel(carrosselSaias, indexSaias);
+
+            indexVestidos = (indexVestidos + 1) % 6;
+            updateCarrossel(carrosselVestidos, indexVestidos);
+        }
+
+        document.getElementById('next-blusas').addEventListener('click', () => {
+            indexBlusas = (indexBlusas + 1) % 6;
+            updateCarrossel(carrosselBlusas, indexBlusas);
+        });
+
+        document.getElementById('prev-blusas').addEventListener('click', () => {
+            indexBlusas = (indexBlusas - 1 + 6) % 6;
+            updateCarrossel(carrosselBlusas, indexBlusas);
+        });
+
+        document.getElementById('next-calcas').addEventListener('click', () => {
+            indexCalcas = (indexCalcas + 1) % 6;
+            updateCarrossel(carrosselCalcas, indexCalcas);
+        });
+
+        document.getElementById('prev-calcas').addEventListener('click', () => {
+            indexCalcas = (indexCalcas - 1 + 6) % 6;
+            updateCarrossel(carrosselCalcas, indexCalcas);
+        });
+
+        document.getElementById('next-saias').addEventListener('click', () => {
+            indexSaias = (indexSaias + 1) % 6;
+            updateCarrossel(carrosselSaias, indexSaias);
+        });
+
+        document.getElementById('prev-saias').addEventListener('click', () => {
+            indexSaias = (indexSaias - 1 + 6) % 6;
+            updateCarrossel(carrosselSaias, indexSaias);
+        });
+
+        document.getElementById('next-vestidos').addEventListener('click', () => {
+            indexVestidos = (indexVestidos + 1) % 6;
+            updateCarrossel(carrosselVestidos, indexVestidos);
+        });
+
+        document.getElementById('prev-vestidos').addEventListener('click', () => {
+            indexVestidos = (indexVestidos - 1 + 6) % 6;
+            updateCarrossel(carrosselVestidos, indexVestidos);
+        });
+
+        // Iniciar o carrossel automático
+        setInterval(autoScroll, 3000); // Muda a cada 3 segundos
+    </script>
+</body>
+</html>
